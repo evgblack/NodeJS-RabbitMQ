@@ -1,0 +1,13 @@
+M1 : listen port : 8080
+M2 : start
+RabbitApp : creating connection
+RabbitApp : creating channel and asserting to data:requests queue
+MicroService : starting to consume data:requests
+RabbitApp : creating channel and asserting to data:responses queue
+RabbitApp : creating connection
+RabbitApp : creating channel and asserting to data:responses-118551 queue
+RabbitApp : creating channel and asserting to data:requests queue
+Gateway : starting to consume data:responses-118551
+Gateway : sending request to data:requests: {"path":"/status","method":"get","params":{},"query":{},"headers":{"user-agent":"PostmanRuntime/7.29.3","accept":"*/*","postman-token":"42efabc1-744a-461c-847e-5210a74dcb03","host":"0.0.0.0:8080","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"connection":{"connecting":false,"destroyed":false,"localAddress":"::ffff:127.0.0.1","localPort":8080,"pending":false,"remoteAddress":"::ffff:127.0.0.1","remoteFamily":"IPv6","remotePort":48988},"requestId":"-wpCabKGdWA6K8JWdnQqP","queue":"data:responses-118551"}
+Response : sending response to data:responses-118551: {"response":{"text":"Thinking..."},"statusCode":200,"headers":{"Content-Type":"application/json"},"requestId":"-wpCabKGdWA6K8JWdnQqP"}
+Gateway : sending response to client: 200 {"text":"Thinking..."}
